@@ -1,4 +1,19 @@
-# AI 변호사
+# RAG 기반 법률 판례 질의응답 챗봇
+
+# 프로그램 개요
+Python, FastAPI, ChromaDB, Ollama를 활용하여 판례 검색과 LLM 응답 생성을 연결한 팀 프로젝트
+
+# 주요 기능
+법률 판례 데이터 전처리 및 임베딩 <br />
+ChromaDB를 활용한 관련 판례 유사도 검색 <br />
+FastAPI 기반 /query REST API <br />
+검색 결과와 사건번호를 포함한 LLM 프롬프트 구성 <br />
+Ollama HTTP API를 이용한 답변 생성 <br />
+React Native·Expo 기반 질의응답 화면 <br />
+
+# 시스템 흐름
+판례 데이터 → 전처리 및 임베딩 → ChromaDB 저장 <br />
+사용자 질문 → FastAPI → 질문 임베딩 → 관련 판례 검색 → 프롬프트 구성 → Ollama → 답변 반환<br />
 
 ## Korean law based RAG
 
@@ -60,3 +75,5 @@ v
 - https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&dataSetSn=71723
 - https://huggingface.co/datasets/joonhok-exo-ai/korean_law_open_data_precedents
 - https://github.com/lbox-kr/lbox-open
+
+이 프로젝트는 학습 및 시연 목적으로 개발되었으며, 실제 법률 자문 서비스를 대체하지 않습니다.
